@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .leftSection,
+  .rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .leftSection {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leftSection h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .leftSection p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .inputGroup {
+    margin-bottom: 15px;
+  }
+  
+  .inputGroup label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .links {
+    margin-top: 20px;
+  }
+  
+  .links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .rightSection {
+    flex: 1;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Pour les tablettes (portrait) */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .rightSection {
+      height: 40vh; /* Les slides prennent 40% de la hauteur */
+      width: 100%; /* Pleine largeur */
+    }
+  
+    .leftSection {
+      height: auto;
+      width: 100%;
+      padding: 20px;
+      box-shadow: none;
+    }
+  }
+  
+  /* Pour les petits écrans (mobiles) */
+  @media (max-width: 480px) {
+    .rightSection {
+      height: 35vh; /* Réduit la hauteur des slides pour les petits écrans */
+    }
+  
+    .leftSection h2 {
+      font-size: 1.5rem;
+    }
+  
+    .leftSection p {
+      font-size: 0.9rem;
+    }
+  
+    .form {
+      max-width: 90%;
+    }
+  
+    .inputGroup input {
+      padding: 8px;
+    }
+  
+    .button {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
+  
