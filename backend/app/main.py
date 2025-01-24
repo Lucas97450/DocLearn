@@ -14,7 +14,7 @@ def read_root():
 # Ajoute ce middleware à ton application
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Remplace par l'URL de ton frontend
+    allow_origins=["http://localhost:3001"],  # Remplace par l'URL de ton frontend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
