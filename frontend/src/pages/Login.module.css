@@ -93,61 +93,55 @@
     flex: 1;
     background-color: #007bff;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     overflow: hidden;
     position: relative;
   }
   
-  /* Media Queries for Responsive Design */
-  
-  /* Pour les tablettes (portrait) */
-  @media (max-width: 768px) {
+  /* Structure par défaut */
+.rightSection {
+    height: 100%; /* Par défaut, occupe toute la hauteur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* Media Query pour petits écrans (mobiles - max-width 768px) */
+@media (max-width: 768px) {
     .container {
-      flex-direction: column;
-      height: auto;
+        flex-direction: column; /* Les sections sont empilées */
     }
-  
+
     .rightSection {
-      height: 40vh; /* Les slides prennent 40% de la hauteur */
-      width: 100%; /* Pleine largeur */
+        height: 50vh; /* Augmente légèrement la hauteur des slides */
+        padding: 15px;
     }
-  
-    .leftSection {
-      height: auto;
-      width: 100%;
-      padding: 20px;
-      box-shadow: none;
+
+
+    .rightSection h2 {
+        font-size: 1.2rem;
     }
-  }
-  
-  /* Pour les petits écrans (mobiles) */
-  @media (max-width: 480px) {
+
+    .rightSection p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query pour très petits écrans (mobiles - max-width 480px) */
+@media (max-width: 480px) {
     .rightSection {
-      height: 35vh; /* Réduit la hauteur des slides pour les petits écrans */
+        height: auto; /* Autorise une hauteur dynamique */
+        padding: 10px;
     }
-  
-    .leftSection h2 {
-      font-size: 1.5rem;
+
+
+    .rightSection h2 {
+        font-size: 1rem;
     }
-  
-    .leftSection p {
-      font-size: 0.9rem;
+
+    .rightSection p {
+        font-size: 0.8rem;
     }
-  
-    .form {
-      max-width: 90%;
-    }
-  
-    .inputGroup input {
-      padding: 8px;
-    }
-  
-    .button {
-      padding: 8px;
-      font-size: 0.9rem;
-    }
-  }
-  
+}

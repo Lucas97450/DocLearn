@@ -35,24 +35,27 @@ const Signup = () => {
 
   const slides = [
     {
-      image: 'https://via.placeholder.com/300x200', // Image 1
-      title: 'Rejoignez notre communauté',
-      description: 'Accédez à des outils de collaboration avancés.',
+      image: '/images/flashcard.svg', // Image 1
+      title: 'Boost Your Learning',
+      description: 'Create and review personalized flashcards to quickly master new concepts.',
     },
     {
-      image: 'https://via.placeholder.com/300x200', // Image 2
-      title: 'Vos données en sécurité',
-      description: 'Nous assurons la confidentialité et la protection de vos informations.',
+      image: '/images/online-test.svg', // Image 2
+      title: 'Learn at Your Own Pace',
+      description: 'Use interactive quizzes to test your knowledge and track your progress.',
     },
     {
-      image: 'https://via.placeholder.com/300x200', // Image 3
-      title: 'Commencez maintenant',
-      description: 'Inscrivez-vous et profitez de nos services.',
+      image: '/images/study.svg', // Image 3
+      title: 'Simplify Your Study Sessions',
+      description: 'Organize your study time efficiently with tools designed for modern learners.',
     },
   ];
 
   return (
     <div className={styles.container}>
+      <div className={styles.rightSection}>
+        <Slideshow slides={slides} />
+      </div>
       <div className={styles.leftSection}>
         <h2>Create an Account</h2>
         <p>Welcome! Please fill in the form to get started:</p>
@@ -103,10 +106,6 @@ const Signup = () => {
             Connectez-vous
           </a>
         </p>
-      </div>
-
-      <div className={styles.rightSection}>
-        <Slideshow slides={slides} />
       </div>
     </div>
   );

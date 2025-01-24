@@ -28,19 +28,19 @@ const Login = () => {
 
   const slides = [
     {
-      image: 'https://via.placeholder.com/300x200', // Image 1
-      title: 'Connexion rapide',
-      description: 'Accédez à toutes vos données en un clic.',
+      image: '/images/flashcard.svg', // Image 1
+      title: 'Boost Your Learning',
+      description: 'Create and review personalized flashcards to quickly master new concepts.',
     },
     {
-      image: 'https://via.placeholder.com/300x200', // Image 2
-      title: 'Sûreté assurée',
-      description: 'Nous garantissons la sécurité de vos informations.',
+      image: '/images/online-test.svg', // Image 2
+      title: 'Learn at Your Own Pace',
+      description: ' Use interactive quizzes to test your knowledge and track your progress.',
     },
     {
-      image: 'https://via.placeholder.com/300x200', // Image 3
-      title: 'Productivité augmentée',
-      description: 'Collaborez et travaillez efficacement.',
+      image: '/images/study.svg', // Image 3
+      title: 'Simplify Your Study Sessions',
+      description: 'Organize your study time efficiently with tools designed for modern learners.',
     },
   ];
 

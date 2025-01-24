@@ -85,10 +85,6 @@
     flex: 1;
     background-color: #007bff;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     overflow: hidden; /* Cache les éléments hors du cadre */
     position: relative;
   }
@@ -103,4 +99,60 @@
     text-decoration: underline;
   }
   
+  .rightSection {
+    flex: 1;
+    background-color: #007bff;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Structure par défaut */
+.rightSection {
+    height: 100%; /* Par défaut, occupe toute la hauteur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* Media Query pour petits écrans (mobiles - max-width 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Les sections sont empilées */
+    }
+
+    .rightSection {
+        height: 50vh; /* Augmente légèrement la hauteur des slides */
+        padding: 15px;
+    }
+
+
+    .rightSection h2 {
+        font-size: 1.2rem;
+    }
+
+    .rightSection p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query pour très petits écrans (mobiles - max-width 480px) */
+@media (max-width: 480px) {
+    .rightSection {
+        height: auto; /* Autorise une hauteur dynamique */
+        padding: 10px;
+    }
+
+
+    .rightSection h2 {
+        font-size: 1rem;
+    }
+
+    .rightSection p {
+        font-size: 0.8rem;
+    }
+}
   
