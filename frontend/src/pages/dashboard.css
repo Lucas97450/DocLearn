@@ -1,0 +1,86 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard-content {
+    margin-left: 200px; /* Space for navbar */
+    padding: 20px;
+  }
+  
+  .welcome-text {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .upload-section {
+    border: 1px dashed #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .upload-box {
+    border: 1px dashed #007bff;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .recent-documents {
+    margin-top: 20px;
+  }
+  
+  .document-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-content {
+      margin-left: 0;
+      padding: 10px;
+    }
+  
+    .upload-section {
+      padding: 15px;
+    }
+  
+    .upload-box {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .upload-section {
+      padding: 10px;
+    }
+  
+    .upload-box {
+      padding: 10px;
+    }
+  }
+  

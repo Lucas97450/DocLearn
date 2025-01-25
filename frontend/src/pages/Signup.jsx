@@ -46,8 +46,8 @@ const Signup = () => {
     },
     {
       image: '/images/study.svg', // Image 3
-      title: 'Simplify Your Study Sessions',
-      description: 'Organize your study time efficiently with tools designed for modern learners.',
+      title: 'Revolutionize Your Study Sessions',
+      description: 'Leverage AI-powered tools to enhance your learning experience and achieve your goals faster.',
     },
   ];
 
