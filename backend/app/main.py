@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import auth  # Importer les routes auth (signup et login)
 from contextlib import asynccontextmanager
-from .database import init_db
+from app.database import init_db
+from app.routes import documents
 
 
 # Initialisation de l'application FastAPI
@@ -35,3 +36,5 @@ app.include_router(auth.router)
 @app.get("/")
 def read_root():
     return {"message": "Bienvenue dans ton application avec lifespan!"}
+
+app.include_router(documents.router)
