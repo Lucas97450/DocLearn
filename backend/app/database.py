@@ -14,11 +14,9 @@ def init_db():
     # Logique pour initialiser la base de données
     Base.metadata.create_all(bind=engine)
 
-@contextmanager
 def get_db():
-    """Génère une session de base de données."""
-    db = SessionLocal()  # Crée une session locale à partir de `SessionLocal`
+    db = Session()
     try:
-        yield db  # Fournit la session à l'appelant
+        yield db
     finally:
-        db.close()  # Ferme la session à la fin
+        db.close()
