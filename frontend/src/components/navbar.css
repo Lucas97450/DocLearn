@@ -1,109 +1,68 @@
-/* Main Container */
-.navbar-container {
-  width: 250px;
-  height: 100vh;
-  background-color: #007bff;
-  color: white;
+/* Navbar Styles */
+.navbar {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  position: relative;
 }
 
-/* Header */
-.navbar-header {
+.logo {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 20px;
 }
 
-/* Links Section */
-.navbar-links {
-  flex-grow: 1;
-}
-
-.upload-button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: #0056b3;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.upload-button:hover {
-  background-color: #004494;
-}
-
-.navbar-links ul {
-  list-style: none;
-  padding: 0;
-}
-
-.navbar-links li {
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 5px;
-  cursor: pointer;
+.nav-links {
   display: flex;
-  align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-.navbar-links li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+/* Mobile Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.navbar-links li i {
-  margin-right: 10px;
-  font-size: 1.2rem;
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
 }
 
-/* Footer Section */
-.navbar-footer {
-  font-size: 0.9rem;
-}
-
-.storage-details {
-  margin-top: 10px;
-}
-
-.storage-bar {
-  height: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 5px;
-  overflow: hidden;
-  margin-top: 5px;
-}
-
-.storage-fill {
-  width: 52%; /* Adjust according to storage usage */
-  height: 100%;
-  background-color: #00ff00;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  .navbar-container {
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar-links ul {
+  .hamburger {
     display: flex;
-    flex-wrap: wrap;
   }
 
-  .navbar-links li {
-    margin: 5px;
-  }
-
-  .navbar-footer {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
     display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    cursor: pointer;
   }
 }

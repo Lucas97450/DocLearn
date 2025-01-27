@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .slideshow {
     position: relative;
     width: 100%;
@@ -36,10 +38,14 @@
     font-size: 1.8rem;
     color: white;
     margin-bottom: 10px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
   }
   
   .text p {
-    font-size: 1rem;
-    color: #d0d0d0;
+    font-size: 1.18rem;
+    color: #ffffff;
+    font-weight:normal;
+    font-family: 'Poppins', sans-serif;
   }
   

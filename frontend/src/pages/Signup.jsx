@@ -35,19 +35,19 @@ const Signup = () => {
 
   const slides = [
     {
-      image: '/images/flashcard.svg', // Image 1
-      title: 'Boost Your Learning',
+      image: '/images/flashcard.png', // Image 1
+      title: 'Learn with Flashcards!',
       description: 'Create and review personalized flashcards to quickly master new concepts.',
     },
     {
-      image: '/images/online-test.svg', // Image 2
-      title: 'Learn at Your Own Pace',
+      image: '/images/online-test.png', // Image 2
+      title: 'Interactive Quizzes!',
       description: 'Use interactive quizzes to test your knowledge and track your progress.',
     },
     {
-      image: '/images/study.svg', // Image 3
+      image: '/images/study.png', // Image 3
       title: 'Revolutionize Your Study Sessions',
-      description: 'Leverage AI-powered tools to enhance your learning experience and achieve your goals faster.',
+      description: 'Leverage AI-powered tools to enhance your learning experience.',
     },
   ];
 
@@ -102,7 +102,7 @@ const Signup = () => {
         </form>
         <p>
           Déjà un compte ?{' '}
-          <a href="/login" className={styles.link}>
+          <a href="/login" className={styles.links}>
             Connectez-vous
           </a>
         </p>

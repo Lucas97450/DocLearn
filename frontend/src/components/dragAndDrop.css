@@ -1,0 +1,32 @@
+.drag-and-drop {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #555;
+  }
+  
+  .drag-and-drop:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .uploaded-files {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .uploaded-files li {
+    background: #f1f1f1;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  

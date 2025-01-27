@@ -1,86 +1,99 @@
-.dashboard-container {
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  position: relative;
+  background: url("https://via.placeholder.com/1920x1080") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Uploaded Section */
+.uploaded-section {
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+.uploaded-section h2 {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+.uploaded-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.uploaded-section li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Arrière-plan global avec dégradé */
+.background {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../../public/images/path-to-your-image.jpg") no-repeat center center/cover;
+
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles pour le contenu (Navbar et Drag-and-Drop) */
+.background .content {
+  width: 100%;
+  padding: 20px;
+  color: white;
+  z-index: 2; /* Assure que le contenu est visible au-dessus de l'image */
+}
+
+.background .content .navbar {
+  position: sticky; /* Fixe la navbar en haut */
+  top: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6); /* Optionnel : Transparence de la navbar */
+  width: 100%;
+}
+
+/* Section en dessous (ex : Derniers uploads) */
+.section-below {
+  background: white;
+  padding: 50px 20px;
+  width: 100%;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .uploaded-section {
+    padding: 10px;
   }
-  
-  .dashboard-content {
-    margin-left: 200px; /* Space for navbar */
-    padding: 20px;
-  }
-  
-  .welcome-text {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .upload-section {
-    border: 1px dashed #007bff;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  .upload-box {
-    border: 1px dashed #007bff;
-    padding: 40px;
-    margin-top: 20px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-  }
-  
-  .recent-documents {
-    margin-top: 20px;
-  }
-  
-  .document-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .actions button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .actions button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .dashboard-content {
-      margin-left: 0;
-      padding: 10px;
-    }
-  
-    .upload-section {
-      padding: 15px;
-    }
-  
-    .upload-box {
-      padding: 20px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .upload-section {
-      padding: 10px;
-    }
-  
-    .upload-box {
-      padding: 10px;
-    }
-  }
-  
+}
